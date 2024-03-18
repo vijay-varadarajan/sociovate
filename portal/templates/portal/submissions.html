@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission Page</title>
+    <link rel="stylesheet" href="{% static 'portal/submissions_styles.css' %}" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Submit Idea</h1>
+      <div class="content">
+
+        <form action="{% url 'submission_view' %}" method="post">
+            {% csrf_token %}
+        <div class="idea-title">
+          <label for="idea">Idea title</label>
+          <input type="text" id="idea" name="project_title" required />
+        </div>
+        <div class="problem-statement">
+          <label for="problem">Problem statement</label>
+          <select id="problem" name="track" required>
+            <option value="" hidden>Select the problem...</option>
+            <option value="Waves of Wellness">Waves of Wellness</option>
+            <option value="Evolution of Education">Evolution of Education</option>
+            <option value="Clean Crusade">Clean Crusade</option>
+            <option value="Pursuit of Prosperity">Pursuit of Prosperity</option>
+            <option value="Eco Empowerment">Eco Empowerment</option>
+            <option value="Climate Catalysis">Climate Catalysis</option>
+          </select>
+        </div>
+
+        <div class="solution-required">
+          <label for="solution">Solution description</label>
+          <textarea
+            id="solution"
+            name="project_description"
+            class="multiline-input"
+            required
+          ></textarea>
+        </div>
+
+        <div class="GitHub-Link">
+          <label for="idea">GitHub Link</label>
+          <input type="url" id="idea" name="github_link" class="link-input"  />
+        </div>
+        <div class="Design-Link">
+          <label for="idea">Design Link</label>
+          <input type="url" id="idea" name="design_link" class="link-input"  />
+        </div>
+        <div class="Other-Link">
+          <label for="idea">Other Links</label>
+          <input type="url" id="idea" name="other_link" class="link-input"  />
+        </div>
+        <b><p><center>Upload other files such as ppt / pdf / word / etc. in one google drive folder and  <br> upload the link to the same above. Don't forget to grant viewing permissions.</center></p></b>
+        <br>
+        
+        <div class="form-group center">
+          <input class="Submit-button" type="submit" value="Submit idea" />
+        </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,51 +1,60 @@
-{% extends 'portal/base.html' %}
 {% load static %}
 
-{% block title %}Sociovate{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block body %}
-    <section id="create">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://db.onlinewebfonts.com/c/708e00bfb7f5731e6fd8bcaaafde9713?family=Quadrat+Grotesk+New+W03+Black"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portal/create_team_styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://db.onlinewebfonts.com/c/991f6390a7781b853b9ad24333df327b?family=Supria+Sans+W01+Regular" rel="stylesheet">
 
-      <div class="content">
-        <h1>Hey {{ user.username }}, ready to take on the heat? </h1><br>
-        <p><b>Teamwork makes the dream work<br><br></b>
-          <span>Create a team of coding enthusiasts and side-game champions with your squad. Join along with your teammates and get ready to rumble. <br> <br>
-            Enter a team name and create a passcode. Other members of your team will use the name and password to verify and join in the team. <br>
-          </span></p>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1><b>Create a new team</b></h1>
+    <div>
+        <form class="centered" action="{% url 'create_team_view' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <p><label class="custom-label" for="teamname">Enter team name</label><br>
+                    <input type="text" id="teamname" placeholder="" required maxlength="200" name="team_name">
+                </p>
+            </div>
+            <!-- <div>
+                <p> <label class="custom-label" for="count">TEAM COUNT</label><br>
+                    <input type="number" id="count" placeholder="For eg. 2,3,4" required max="4" min="2">
+                </p>
+            <div> -->
+         
+            <div>
+                <p> <label class="custom-label" for="Passcode">Enter team passcode</label><br>
+                    <input type="number" id="Passcode" placeholder="" min="0" max="9999" minlength="4" maxlength="4" name="team_passcode">
+                </p>
+            </div>
+<br>
+            <p><button class="button-reg" type="submit"><input type="submit" value="Create" /></button></p>
+            <br>
+    
+
+
+            <p class="good-font-bold" ><a href="{% url 'join_team_view' %}">JOIN A TEAM</a></p>
+
+
+
+
+        </form>
     </div>
 
-      <form action="{% url 'create_team_view' %}" method="post">
-        {% csrf_token %}
-        <div class="container">
-          
-          <h2>Create a team</h2>
-          <label for="name"><b>Team Name</b></label>
-          <input type="text" placeholder="Enter Team Name" name="team_name" id="name" required autocomplete="off" autofocus>
-      
-          <label for="psw"><b>Team Passcode</b></label>
-          <input type="password" placeholder="Enter Team Passcode" name="team_passcode" id="psw" required autocomplete="off">
-      
-          <label for="psw-repeat"><b>Repeat Passcode</b></label>
-          <input type="password" placeholder="Repeat Passcode" name="repeat_passcode" id="psw-repeat" required autocomplete="off">
+</body>
 
-          {% if messages %}
-          <ul class="messages">
-            {% for message in messages %}
-              <div {% if message.tags %} id="{{ message.tags }}" {% endif %}>
-              <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-              </div>
-            {% endfor %}
-          </ul>
-          {% endif %}
-
-
-          <input type="submit" name="Submit" placeholder="Create" class="registerbtn" />
-        </div>
-        
-        <div class="container signin">
-          <p>Want to join a team ? <a href="{% url 'join_team_view' %}">Join now</a>.</p>
-        </div>
-      </form>
-    </section>
-
-{% endblock %}
+</html>

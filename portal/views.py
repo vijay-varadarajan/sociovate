@@ -39,10 +39,10 @@ def dashboard(request):
         submissions = Submission.objects.get(team=user_status.joined_team)
 
         return render(request, "portal/dashboard.html", {
-            'in_team': True, 'members': members, 'submissions':submissions, 'team':team , 'message': '',
+            'in_team': True, 'member0': members[0], 'member1': members[1] if len(members) == 2 else '-', 'member2': members[2] if len(members) == 2 else '-', 'member3':members[3] if len(members) == 2 else '-' , 'count': len(members), 'submissions':submissions, 'team':team , 'message': '',
         })
     
-    return HttpResponseRedirect(reverse("create_team_view"))
+    return render(request, "portal/dashboard.html")
 
 
 @login_required(login_url='/login')
@@ -70,28 +70,31 @@ def submission_view(request):
         
         github_link = request.POST["github_link"]
         
-        drive_link = request.POST["drive_link"]
+        design_link = request.POST["design_link"]
+        
+        other_links = request.POST["other_links"]
 
         # check if user is in a team
         if not user_status.in_team:
             messages.error(request, "You are not in a team!")
             return HttpResponseRedirect(reverse('create_team_view'))
         
-        print(project_title, track, project_description, github_link, drive_link)
+        print(project_title, track, project_description, github_link, design_link)
         
         submissions = Submission.objects.get(team=user_status.joined_team)
         submissions.title = project_title
         submissions.track = track
         submissions.description = project_description
         submissions.github_link = github_link
-        submissions.drive_link = drive_link
+        submissions.drive_link = design_link
+        submissions.other_links = other_links
         submissions.save()
         
         submissions = Submission.objects.get(team=user_status.joined_team)
 
         messages.success(request, "Idea submitted successfully!")
-        return HttpResponseRedirect(reverse("dashboard") + '#submit', {
-            'user': request.user, 'submissions':submissions, 'message': 'Submitted successfully!', 'user_status':user_status,   
+        return HttpResponseRedirect(reverse("dashboard"), {
+            'user': request.user, 'submissions':submissions, 'message': 'Submitted successfully!', 'user_status':user_status,  
         })
 
     else:
@@ -99,10 +102,10 @@ def submission_view(request):
         user_status = UserStatus.objects.get(user=user)
 
         if not user_status.in_team:
-            messages.error(request, "You are not in a team!")
-            return HttpResponseRedirect(reverse("dashboard") + "#submit")
+            print("not in team")
+            return HttpResponseRedirect(reverse("dashboard"))
         
-        return HttpResponseRedirect(reverse("dashboard") + "#submit")
+        return render(request, "portal/submissions.html")
 
 
 @login_required(login_url='/login')
@@ -120,13 +123,7 @@ def create_team_view(request):
         message = ''
         team_name = request.POST["team_name"]
         team_passcode = request.POST["team_passcode"]
-        repeat_passcode = request.POST["repeat_passcode"]
-
-        print(team_name, team_passcode, repeat_passcode)
-
-        if team_passcode != repeat_passcode:
-            messages.error(request, "Passcodes do not match!")
-            return HttpResponseRedirect(reverse("create_team_view"))
+        
 
         if not team_name:
             messages.error(request, "Team name cannot be empty!")
@@ -134,6 +131,11 @@ def create_team_view(request):
         
         if not team_passcode:
             messages.error(request, "Passcode cannot be empty!")
+            return HttpResponseRedirect(reverse("create_team_view"))
+        
+        exists = Team.objects.filter(team_name=team_name).exists()
+        if exists:
+            messages.error(request, "Team name already exists!")
             return HttpResponseRedirect(reverse("create_team_view"))
         
         # update database
@@ -264,19 +266,14 @@ def login_view(request):
             messages.error(request, "Invalid username and/or password.")
             return HttpResponseRedirect(reverse("login_view"))
         
-        user_status = UserStatus.objects.get(user=user)
         
-        if user_status.in_team:
-            return HttpResponseRedirect(reverse("dashboard"))
+        return HttpResponseRedirect(reverse("dashboard"))
         
-        return HttpResponseRedirect(reverse("create_team_view"))
-    
     return render(request, "portal/login.html")
 
 
 def register_view(request):
     if request.method == "POST":
-        first_name = request.POST["first_name"].strip()
 
         username = request.POST["username"].strip()
         if not len(str(username)) > 2:
@@ -305,14 +302,14 @@ def register_view(request):
         # regex to validate password
           
         
-        retype_password = request.POST["retype_password"].strip()
+        confirm_password = request.POST["confirm_password"].strip()
         
-        if password != retype_password:
+        if password != confirm_password:
             messages.error(request, "Passwords must match!")
             return HttpResponseRedirect(reverse("register_view"))
         
         try:
-            user = User.objects.create_user(first_name=first_name, username=username, email=email, password=password, is_active=False)
+            user = User.objects.create_user(username=username, email=email, password=password, is_active=False)
             user.save()
             
         except IntegrityError:

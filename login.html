@@ -1,0 +1,50 @@
+{% extends "portal/base.html" %}
+
+{% load static %}
+
+{% block title %}Sociovate{% endblock %}
+
+{% block body %}
+    <section id="register">
+    
+      <div class="content">
+        <h1> Done with the registration?</h1>
+        <p>
+          <span>Assemble your team and get ready to have an exhilarating journey, you are just a step away to join the coding adventure with a never before experience.</span>
+        </p>
+    </div>
+
+      <form action="{% url 'login_view' %}" method="post">
+        
+        {% csrf_token %}
+        
+        <div class="container">
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" id="email" required autocomplete="off" autofocus>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="psw" required autocomplete="off">
+          <div>
+            <p><a href="{% url 'password_reset_email_form_view' %}">Forgot password? </a></p>    
+          </div>
+
+          {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+              <div {% if message.tags %} id="{{ message.tags }}" {% endif %}>
+              <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              </div>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          
+          <input type="submit" name="Submit" class="registerbtn" placeholder="Login" />
+        </div>
+        <div class="container signin">
+          <p>Don't have an account? <a href="{% url 'register_view' %}">Register</a></p>
+        </div>
+        
+      </form>
+      
+    </section>
+    
+{% endblock %}

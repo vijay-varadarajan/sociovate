@@ -1,0 +1,45 @@
+{% extends 'portal/base.html' %}
+{% load static %}
+
+{% block title %}Sociovate{% endblock %}
+
+{% block body %}
+    <section id="join">
+
+      <div class="content">
+        <h1>Hey {{ user.username }}, </h1><br><h2>Enter a team and start coding! </h2><br>
+        <p><b>Teamwork makes the dream work<br><br></b>
+        <p><span>Enter the name and passcode of an existing team that you want to join.</span></p>
+    </div>
+
+      <form action="{% url 'join_team_view' %}" method="post">
+        {% csrf_token %}
+        
+        <div class="container">
+          <h2>Join a team</h2><br>
+          <label for="team_name"><b>Team Name</b></label>
+          <input type="text" placeholder="Enter Team Name" name="team_name" id="name" required autocomplete="off" autofocus>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Passcode" name="team_passcode" id="psw" required autocomplete="off">
+          
+          {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+              <div {% if message.tags %} id="{{ message.tags }}" {% endif %}>
+              <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              </div>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <input type="submit" name="Submit" placeholder="Join now" class="registerbtn" />
+        </div>
+        
+        <div class="container signin">
+          <p>Don't have a team? <a href="{% url 'create_team_view' %}">Create one</a>.</p>
+        </div>
+      </form>
+    </section>
+
+{% endblock %}

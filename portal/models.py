@@ -32,6 +32,7 @@ class Submission(models.Model):
     description = models.TextField(blank=True, null=True)
     github_link = models.URLField(max_length=256, blank=True, null=True)
     drive_link = models.URLField(max_length=256, blank=True, null=True)
+    other_links = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.team} - {self.title}"
