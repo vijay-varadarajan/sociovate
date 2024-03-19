@@ -6,7 +6,7 @@ h1 {
     margin-top: 5%;
     font-size: 50px;
     margin-bottom: 4%;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Clash Display', sans-serif;
     
 }
 
@@ -57,7 +57,7 @@ nav {
 
 
 nav a {
-    font-family: "Supria Sans W01 Regular";
+    font-family: 'Clash Display', sans-serif;
     display: inline-block; /* Make the links appear in a row */
     padding: 10px 20px; /* Add padding to the links */
     text-decoration: none; /* Remove the default underline */
@@ -110,7 +110,7 @@ input {
 
 
 .good-font-bold {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Clash Display', sans-serif;
     /* Change "Arial" to your preferred font family */
     font-weight: bold;
     font-size: x-large;
@@ -122,7 +122,7 @@ input {
     padding: 1.5%;
     display: inline-block;
     width: 50%;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Clash Display', sans-serif;
     font-weight: normal;
     font-size:large;
     color: #000;
