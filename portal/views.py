@@ -180,27 +180,31 @@ def join_team_view(request):
         try:
             team = Team.objects.get(team_name=team_name)
         except:
-            messages.error(request, "Team does not exist!")
+            print(request, "Team does not exist!")
             return HttpResponseRedirect(reverse("join_team_view"))
         
         # check if team passcode matches
         if team.team_passcode != team_passcode:
-            messages.error(request, "Incorrect passcode!")
+            print(request, "Incorrect passcode!")
             return HttpResponseRedirect(reverse("join_team_view"))
         
         if team.members_count == 4:
-            messages.error(request, "Team is full!")
+            print(request, "Team is full!")
             return HttpResponseRedirect(reverse("join_team_view"))
 
+        print('team found')
         # update userstatus with teamname and joined team
         user_status = UserStatus.objects.get(user=request.user)
         user_status.in_team = True
         user_status.joined_team = team
         user_status.save()
+        
+        print('userstatus updated')
 
         # update members_count in teams
         team.members_count += 1
         team.save()
+        print('teamstatus updated')
         
         return HttpResponseRedirect(reverse("dashboard"))
     
