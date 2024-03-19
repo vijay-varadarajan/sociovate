@@ -73,7 +73,7 @@
             <div class="submission-details">
             <p class="submission-text">Submission Deadline</p>
             <p class="submission-date">25th March 2024</p>
-            <p class="submission-status">Status: {% if submissions %}Submitted{% else %}Pending{% endif %}</p>
+            <p class="submission-status">Status: {% if submissions.title %}Submitted{% else %}Pending{% endif %}</p>
             </div>
             {% if submissions %}
                 <a href="{% url 'submission_view' %}"><button class="submit-button">Edit</button></a>
