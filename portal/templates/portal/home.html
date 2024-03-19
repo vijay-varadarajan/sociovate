@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'portal/home_styles.css' %}">
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="first-div">
       <div class="top">
         <div class="top-bar">
         <a href="{% url 'home' %}" class="nav-icon"><p class="home">Home</p></a>
-        <a href="{% url 'home' %}#second-div" class="nav-icon"><p class="home">What is sociovate?</p></a>
-        <a href="{% url 'home' %}#third-div" class="nav-icon"><p class="home">Tracks</p></a>
-        <a href="{% url 'home' %}#second-div" class="nav-icon"><p class="home">Timeline</p></a>
-        <a href="{% url 'home' %}#fourth-div" class="nav-icon"><p class="home">Contact Us</p></a>
+        <a href="{% url 'home' %}#about" class="nav-icon"><p class="home">What is sociovate?</p></a>
+        <a href="{% url 'home' %}#tracks" class="nav-icon"><p class="home">Tracks</p></a>
+        <a href="{% url 'home' %}#timeline" class="nav-icon"><p class="home">Timeline</p></a>
+        <a href="{% url 'home' %}#aboutus" class="nav-icon"><p class="home">About Us</p></a>
       </div>
       <a href="{% url 'login_view' %}"><button class="login-btn">Login</button></a>
       </div>
@@ -40,7 +44,7 @@
       </div>
     </div>
 
-
+    <section id="about">
     <div class="second-div">
       <div class="what">
         What is Sociovate?
@@ -51,9 +55,9 @@
         <u>Make an Impact on Social Development</u>
       </div>
     </div>
+    </section>
 
-
-
+    <section id="tracks">
     <div class="third-div">
       <div class="tracktitle"><h1>Tracks</h1></div>
       <div class="sdgs">
@@ -84,7 +88,9 @@
           
       </div>
     </div>  
+    </section>
 
+    <section id="aboutus">
     <div class="fourth-div">
       <div class="aboutustitle">
         <h1>About Us</h1>
@@ -106,6 +112,29 @@
         </div>
       </div>
     </div>
+    </section>
+
+    <section id="contactus">
+      <div id="flexrow">
+        <div id="getintouch">
+          <h2>Get in touch with us</h2>
+        </div>
+        <div id="numbers">
+          <div id="name1">
+            <p>Jatin Jakhar</p>
+            <p>1234567890</p>
+          </div>
+          <div id="name2">
+            <p>Umang Naulakha</p>
+            <p>0987654321</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+    </section>
     
   </body>
 </html>

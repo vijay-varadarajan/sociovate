@@ -17,9 +17,13 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    
+    <a href="{% url 'home' %}" class="home-icon"><i class="fa fa-home"></i></a>
     <div class="register-container">
       <div class="register-text">Register</div>
       <div class="register-form">
@@ -33,8 +37,8 @@
           <input type="password" id="password" name="password" />
           <label for="cnf-password">confirm password</label>
           <input type="password" id="cnf-password" name="confirm_password" />
-          <button><input type="submit" name="submit" placeholder="Submit"></button>
-
+          <button><input type="submit" name="submit" placeholder="Submit" id="register-submit"></button>
+          <p>Have an account? <a href="{% url 'login_view' %}">Login</a></p>
         </form>
       </div>
     </div>

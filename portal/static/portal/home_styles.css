@@ -403,6 +403,29 @@ u {
   height: 130px;
 }
 
+#contactus {
+  background-color: #0f3b00;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#line1 {
+  
+width: 671px;
+height: 0px;
+
+border: 1px solid #54DD4A;
+
+flex: none;
+order: 1;
+flex-grow: 1;
+
+}
+
 
 @media screen and (max-width: 768px) {
   .collab {

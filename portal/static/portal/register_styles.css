@@ -12,6 +12,20 @@
     align-items: center;
     flex-direction: column;
   }
+
+  
+  .home-icon {
+    color: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px 0px 0px 20px;
+  }
+
+  .home-icon:hover {
+    color:#222222;
+    transform: scale(1.2);
+  }
   
   .register-bg {
     width: 100vw;
@@ -25,7 +39,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin-top: 10vh;
+    margin-top: 2vh;
   }
   
   .register-text {
@@ -65,7 +79,7 @@
     background: #ffffff;
     border: 2px solid #000000;
     border-radius: 0px 8px 8px 8px;
-    width: 36vw;
+    
     margin-bottom: 3rem;
     font-size: 2rem;
     font-family: "Clash Display", sans-serif;
@@ -97,6 +111,15 @@
     cursor: pointer;
   }
   
+  #login-submit:hover button{
+    background: #fb2c15;
+    cursor: pointer;
+  }
+  #login-submit:hover input{
+    background: #fb2c15;
+    cursor: pointer;
+  }
+  
   button {
     display: flex;
     justify-content: center;
@@ -113,6 +136,26 @@
     letter-spacing: 0.03em;
     color: white;
     margin: 0.5rem 11rem 0 11rem;
+  }
+
+  p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: "Clash Display", sans-serif;
+    font-weight: normal;
+    padding-left: 0.5rem;
+    margin-top: 0.8rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: aliceblue;
+    text-decoration: underline;
   }
   
   @media only screen and (max-width: 768px) {
@@ -153,6 +196,7 @@
         font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: 0.03em;
+        width: 80%;
       }
 
       input[type="text"], input[type="password"], input[type="email"] {

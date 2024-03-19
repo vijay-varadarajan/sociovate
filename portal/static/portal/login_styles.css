@@ -9,8 +9,17 @@
     overflow-x: hidden;
   }
 
-  a {
-    text-decoration: none;
+  .home-icon{
+    color: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px 0px 0px 20px;
+  }
+
+  .home-icon:hover {
+    color:#222222;
+    transform: scale(1.2);
   }
   
   .login-bg {
@@ -114,6 +123,26 @@
   button:hover {
     background: #fb2c15;
     cursor: pointer;
+  }
+
+  p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: "Clash Display", sans-serif;
+    font-weight: normal;
+    padding-left: 0.5rem;
+    margin-top: 0.8rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: aliceblue;
+    text-decoration: underline;
   }
 
   .login-bg {

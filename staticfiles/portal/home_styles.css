@@ -404,6 +404,46 @@ u {
 }
 
 
+#contactus {
+  overflow-x: hidden;
+  background-color: #0f3b00;
+  color: white;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#flexrow {
+  font-family: "Clash Display", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#getintouch {
+  color: greenyellow;
+  width: 50vw;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#numbers {
+  padding: 10px;
+
+  width: 30vw;
+  border: 2px solid greenyellow;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items:normal;
+  justify-content: space-around;
+}
+
 @media screen and (max-width: 768px) {
   .collab {
     margin-top: 10%;
@@ -565,6 +605,26 @@ u {
     height: 70px;
     left: 57%;
     top: 80%;
+  }
+
+  #flexrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #getintouch {
+    width: 70vw;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  #numbers {
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 

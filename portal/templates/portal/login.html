@@ -17,10 +17,13 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-
+    <br>
+    <a href="{% url 'home' %}" class="home-icon"><i class="fa fa-home"></i></a>
     <div class="login-container">
       <div class="login-text">Login</div>
       <div class="login-form">
@@ -35,7 +38,7 @@
               <input type="password" id="password" name="password" />
             </div>
             <button id="login-submit"><input type="submit" name="submit" class="registerbtn" value="Login" placeholder="Login" /></button>
-            <!-- <p>Don't have an account? <a href="{% url 'register_view' %}">Register</a></p> -->
+            <p>Don't have an account? <a href="{% url 'register_view' %}">Register</a></p>
           </form>
       </div>
     </div>
