@@ -37,6 +37,11 @@
           <input type="password" id="password" name="password" />
           <label for="cnf-password">confirm password</label>
           <input type="password" id="cnf-password" name="confirm_password" />
+          {% if messages %}
+            {% for message in messages %}
+              <p class="error-msg">{{ message }}</p>
+            {% endfor %}
+          {% endif %}
           <button><input type="submit" name="submit" placeholder="Submit" id="register-submit"></button>
           <p>Have an account? <a href="{% url 'login_view' %}">Login</a></p>
         </form>
