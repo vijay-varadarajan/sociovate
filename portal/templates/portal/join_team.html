@@ -30,13 +30,13 @@
           {% csrf_token %}
             <div>
                 <p><label class="custom-label" for="teamname">Enter team name</label><br>
-                    <input type="text" id="teamname" placeholder="" required maxlength="200">
+                    <input type="text" id="teamname" name="team_name" placeholder="" required maxlength="200">
                 </p>
             </div>
          
             <div>
                 <p> <label class="custom-label" for="Passcode">Enter team passcode</label><br>
-                    <input type="number" id="Passcode" placeholder="XXXX" min="0" max="9999" minlength="4" maxlength="4" >
+                    <input type="number" id="Passcode" name="team_passcode" placeholder="XXXX" min="0" max="9999" minlength="4" maxlength="4" >
                 </p>
             </div>
 <br>
