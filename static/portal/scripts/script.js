@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (window.innerWidth > 768) {
             hamburgerIcon.style.display = 'none';
             nav.style.display = 'flex';
-
+            nav.style.position = '';
         } else {
             hamburgerIcon.style.display = 'block';
             nav.style.display = 'none';
@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             hamburgerIcon.classList.remove('fa-bars');
             hamburgerIcon.classList.add('fa-times');
         } else {
-            nav.style.position = '';
+            nav.style.position='';
             nav.style.display = 'none';
             hamburgerIcon.classList.remove('fa-times');
             hamburgerIcon.classList.add('fa-bars');

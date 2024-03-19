@@ -23,8 +23,8 @@
 
     <h1><b>Join a team</b></h1>
     <div>
-        <form class="centered" action="reg.html">
-          
+        <form class="centered" action="{% url 'join_team_view' %}" method="post">
+          {% csrf_token %}
             <div>
                 <p><label class="custom-label" for="teamname">Enter team name</label><br>
                     <input type="text" id="teamname" placeholder="" required maxlength="200">
@@ -37,15 +37,9 @@
                 </p>
             </div>
 <br>
-            <p><button class="button-reg" type="submit">Join team</button></p>
+            <p><button class="button-reg" type="submit"><input type="submit" value="Join" /></button></p>
             <br>
-    
-
-
             <p class="good-font-bold" ><a href="{% url 'create_team_view' %}">CREATE A TEAM</a></p>
-
-
-
 
         </form>
     </div>

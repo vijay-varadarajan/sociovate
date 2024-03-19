@@ -156,3 +156,8 @@ input {
     margin-bottom: 3%;
 
 }
+
+input[type='submit'] {
+    border: none;
+    background-color: transparent;
+}
