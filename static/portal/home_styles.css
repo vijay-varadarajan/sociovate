@@ -197,6 +197,7 @@ body {
   height: 800px;
   background-color: #122315;
   margin-top: -1px;
+  
   border: none;
   -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/80px 100%;
 }
@@ -562,6 +563,7 @@ u {
     height: 320px;
     margin-top: -1px;
     padding: auto;
+    padding-top: 30px;
   }
 
   .what {
