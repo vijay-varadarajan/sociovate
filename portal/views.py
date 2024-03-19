@@ -223,10 +223,12 @@ def leave_team_view(request):
 
     user = User.objects.get(username=request.user.username)
     user_status = UserStatus.objects.get(user=user)
-
-    team = Team.objects.get(team_name=user_status.joined_team.team_name)
-    team.members_count -= 1
-
+    
+    try:
+        team = Team.objects.get(team_name=user_status.joined_team.team_name)
+        team.members_count -= 1
+    except:
+        return HttpResponseRedirect(reverse("dashboard"))
 
     user_status.in_team = False
     user_status.joined_team = None
