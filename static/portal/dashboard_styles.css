@@ -1,7 +1,7 @@
 body {
 
     background-color: antiquewhite;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Clash Display', sans-serif;
 }
 
 a {
@@ -39,7 +39,7 @@ a:hover button{
     border-radius: 10px;
     background-color: #ffffff;
     color: #010304;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Clash Display', sans-serif;
     font-size: 12px;
     cursor: pointer;
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 1);

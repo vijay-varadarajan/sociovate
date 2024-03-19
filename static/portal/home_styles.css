@@ -3,7 +3,7 @@ html {
 }
 body {
   background-color: antiquewhite;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Clash Display', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 .login-btn {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Clash Display', sans-serif;
   position: relative;
   width: 90px;
   height: 53px;
@@ -80,7 +80,7 @@ body {
 }
 
 .home {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Clash Display', sans-serif;
   font-size: 15px;
 }
 
@@ -160,7 +160,7 @@ body {
 }
 
 .register-btn {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Clash Display', sans-serif;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -171,7 +171,7 @@ body {
 }
 
 .reg {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Clash Display', sans-serif;
   width: 240px;
   height: 60px;
   background-color: #ED402D;
