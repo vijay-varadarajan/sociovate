@@ -10,20 +10,22 @@ h1 {
     
 }
 
-.glassmorphic-navbar a:hover {
-    color: rgba(0, 0, 0, 5); /* Adjust hover text color */
-  }
-
 body {
     background-color: #F3EDE4;
    
-    
 }
-header nav,button{
-    display: inline-block;
+.dashboard-icon{
+    color: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px 0px 0px 20px;
+  }
 
-}
-
+  .dashboard-icon:hover {
+    color:#222222;
+    transform: scale(1.2);
+  }
 nav {
     color: #666;
     text-align: center; /* Center align the content */
@@ -39,8 +41,6 @@ nav {
     font-size: larger;
     margin-bottom: 8px;
     margin-left: 30%;
-  
-    
 }
 
 
@@ -71,8 +71,6 @@ form {
 }
 
 input {
-    
-  
     padding: 3%;
     border: 2px solid #aaa;
     border-top-right-radius: 6px;
@@ -90,7 +88,7 @@ input {
     border: 2px solid;
     /* Add a 2px solid border with a color of #ccc */
     border-radius: 30px;
-    width: 24%;
+    width: 30%;
     /* Set the width of the form container */
     background-color: #fff;
     margin-left: 37%;
@@ -154,10 +152,41 @@ input {
     font-size: xx-large;
     box-shadow: -3px 3px 3px #666;
     margin-bottom: 3%;
-
 }
 
 input[type='submit'] {
     border: none;
     background-color: transparent;
+    color: white;
+    font-size: x-large;
 }
+
+
+@media screen and (max-width=1200px) {
+    .centered {
+        width:40%;
+        margin-left: 30%;
+    }
+}
+
+@media screen and (max-width=900px) {
+    .centered {
+        width:50%;
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width=690px) {
+    .centered {
+        width:65%;
+        margin-left: 18%;
+    }
+}
+
+@media screen and (max-width=500px) {
+    .centered {
+        width:80%;
+        margin-left: 10%;
+    }
+}
+
