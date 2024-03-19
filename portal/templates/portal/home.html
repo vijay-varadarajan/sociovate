@@ -16,28 +16,30 @@
   </head>
   <body>
     {% include 'portal/includes/navbar.html' %}
-    <div class="first-div">
-      <img  class="mountains" src="{% static 'portal/images/Pasted Graphic.png' %}" alt="">
-      <div class="logos-title">
-        <div class="collab">
-          <img  class="IET-logos" src="{% static 'portal/images/Pasted Graphic 1.png' %}" alt="">
-          <img class="X-logos" src="{% static 'portal/images/Pasted Graphic 3.png' %}" alt="">
-          <img class="IXDA-logos" src="{% static 'portal/images/Pasted Graphic 2.png' %}" alt="">
+    <div class="main">
+      <div class="first-div">
+        <img  class="mountains" src="{% static 'portal/images/Pasted Graphic.png' %}" alt="">
+        <div class="logos-title">
+          <div class="collab">
+            <img  class="IET-logos" src="{% static 'portal/images/Pasted Graphic 1.png' %}" alt="">
+            <img class="X-logos" src="{% static 'portal/images/Pasted Graphic 3.png' %}" alt="">
+            <img class="IXDA-logos" src="{% static 'portal/images/Pasted Graphic 2.png' %}" alt="">
+          </div>
+          <div class="event">
+            <img  class="sociovate" src="{% static 'portal/images/Pasted Graphic 4.png' %}" alt="">
+          </div>
         </div>
-        <div class="event">
-          <img  class="sociovate" src="{% static 'portal/images/Pasted Graphic 4.png' %}" alt="">
-        </div>
-      </div>
-      <div class="buttons">
-        <div class="text-sumn">
-          <p class="text-s">A sustainable development ideathon+designathon</p>
-        </div>
-        <div class="register-btn">
-          {% if user.is_authenticated %}
-          <a href="{% url 'dashboard' %}"><button class="reg">Dashboard</button></a>
-          {% else %}
-          <a href="{% url 'register_view' %}"><button class="reg">Register now</button></a>
-          {% endif %}
+        <div class="buttons">
+          <div class="text-sumn">
+            <p class="text-s">A sustainable development ideathon+designathon</p>
+          </div>
+          <div class="register-btn">
+            {% if user.is_authenticated %}
+            <a href="{% url 'dashboard' %}"><button class="reg">Dashboard</button></a>
+            {% else %}
+            <a href="{% url 'register_view' %}"><button class="reg">Register now</button></a>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>

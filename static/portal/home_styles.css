@@ -182,6 +182,10 @@ a:hover {
   border-width: 3px;
 }
 
+.main{
+  background-color: #122315;
+}
+
 .register-btn {
   font-family: 'Clash Display', sans-serif;
   position: relative;
