@@ -1,7 +1,7 @@
 
 
 .curved-div {
-    position: fixed;
+    position: relative;
     background: #ff3c00;
     color: #FFF;
     text-align: center;
