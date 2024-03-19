@@ -1,20 +1,6 @@
 body {
   background-color: #00542f;
-  margin: 0px;
 }
-
-.timeline {
-  min-width: 100vw;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
-.timeline img {
-  height: 100%;
-  width: 100%;
-}
-
 .image {
   position: relative;
   margin-top: -8px;
