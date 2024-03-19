@@ -37,6 +37,11 @@
               <label for="password">password</label>
               <input type="password" id="password" name="password" />
             </div>
+            {% if messages %}
+              {% for message in messages %}
+              <p class="info-msg">{{ message }}</p>
+              {% endfor %}
+            {% endif %}
             <button id="login-submit"><input type="submit" name="submit" class="registerbtn" value="Login" placeholder="Login" /></button>
             <p>Don't have an account? <a href="{% url 'register_view' %}">Register</a></p>
           </form>
