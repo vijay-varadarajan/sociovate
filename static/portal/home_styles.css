@@ -561,9 +561,9 @@ u {
 
   .second-div {
     height: 320px;
-    margin-top: -1px;
+    margin-top: 120px;
     padding: auto;
-    padding-top: 180px;
+    padding-top: 130px;
   }
 
   .what {

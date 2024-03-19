@@ -1,12 +1,7 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-}
+
 
 .curved-div {
-    position: relative;
+    position: fixed;
     background: #ff3c00;
     color: #FFF;
     text-align: center;
