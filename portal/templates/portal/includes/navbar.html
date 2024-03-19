@@ -1,12 +1,26 @@
-<link rel="stylesheet" href="../../../static/portal/navbar_styles.css">
+<div id="hamburger-icon">
+    <!-- font awesome hamburger icon -->
+    <i class="fa fa-bars" style="font-size: 24px;"></i>
 
-<div>
-    <nav>
-        <div id="scroll-nav-icons">
-
+</div>
+<div id="navdiv">
+        <nav>
+            <div id="scroll-nav-icons">
+                <ul>
+                    <a href="{% url 'home' %}#"><li>Home</li></a>
+                    <a href="{% url 'home' %}#about"><li>What's sociovate</li></a>
+                    <a href="{% url 'home' %}#tracks"><li>Tracks</li></a>
+                    <a href="{% url 'home' %}#timeline"><li>Timeline</li></a>
+                    <a href="{% url 'home' %}#aboutus"><li>About Us</li></a>
+                    <a href="{% url 'home' %}#contactus"><li>Contact Us</li></a>
+            </ul>
         </div>
-        <div id="login-icon">
-            
+        <div id="login-btn">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout_view' %}"><button>Logout</button></a>
+            {% else %}
+            <a href="{% url 'login_view' %}"><button>Login</button></a>
+            {% endif %}
         </div>
     </nav>
 </div>

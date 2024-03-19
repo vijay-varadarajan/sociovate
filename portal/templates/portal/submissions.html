@@ -11,8 +11,17 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{% static 'portal/navbar_styles.css' %}">
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    {% include 'portal/includes/navbar.html' %}
     <div class="container">
       <h1 class="heading">Submit Idea</h1>
       <div class="content">
@@ -67,5 +76,6 @@
         </form>
       </div>
     </div>
+    <script src="{% static 'portal/scripts/script.js' %}"></script>
   </body>
 </html>

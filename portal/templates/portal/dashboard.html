@@ -7,11 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=7">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'portal/navbar_styles.css' %}">
   <title>Dashboard</title>
   <link rel="stylesheet" href="{% static 'portal/dashboard_styles.css' %}">
+  <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+    {% include 'portal/includes/navbar.html' %}
     {% if not in_team %}
     <h2 class="dashboard-title">Dashboard</h2>
     <p class="user-info">{{ user.username }}</p>
@@ -75,6 +83,6 @@
         </div>
     </div>
     {% endif %}
-  <script src="script.js"></script>
+    <script src="{% static 'portal/scripts/script.js' %}"></script>
 </body>
 </html>

@@ -6,23 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'portal/home_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/navbar_styles.css' %}">
     <link
       href="https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    {% include 'portal/includes/navbar.html' %}
     <div class="first-div">
-      <div class="top">
-        <div class="top-bar">
-        <a href="{% url 'home' %}" class="nav-icon"><p class="home">Home</p></a>
-        <a href="{% url 'home' %}#about" class="nav-icon"><p class="home">What is sociovate?</p></a>
-        <a href="{% url 'home' %}#tracks" class="nav-icon"><p class="home">Tracks</p></a>
-        <a href="{% url 'home' %}#timeline" class="nav-icon"><p class="home">Timeline</p></a>
-        <a href="{% url 'home' %}#aboutus" class="nav-icon"><p class="home">About Us</p></a>
-      </div>
-      <a href="{% url 'login_view' %}"><button class="login-btn">Login</button></a>
-      </div>
       <img  class="mountains" src="{% static 'portal/images/Pasted Graphic.png' %}" alt="">
       <div class="logos-title">
         <div class="collab">
@@ -51,13 +45,14 @@
       </div>
       <div class="desc">An overnight offline ideathon & designathon collaboratively organised by Interaction Design Association (IxDA) and The Institution of Engineering and Technology(IET) at VIT-Vellore. The event expects to see over 250 participants. It aims to spotlight unique and innovative ideas over 33 hours on 17 SDG principles and design a prototype, from 18th to 19th March.</div>
       <div class="regnow">
-        <a href="{% url 'register_view' %}"><p>->Register now</p></a>
+        <a href="{% url 'register_view' %}" id="register_a"><p>-> Register now</p></a>
         <u>Make an Impact on Social Development</u>
       </div>
     </div>
     </section>
 
     <section id="tracks">
+      <br>
     <div class="third-div">
       <div class="tracktitle"><h1>Tracks</h1></div>
       <div class="sdgs">
@@ -92,8 +87,9 @@
 
     <section id="aboutus">
     <div class="fourth-div">
+      <br>
       <div class="aboutustitle">
-        <h1>About Us</h1>
+        <br><h1>About Us</h1>
       </div>
       <img class="cloud-1" src="{% static 'portal/images/Pasted Graphic 9.png' %}" alt="">
       <img class="cloud-2" src="{% static 'portal/images/Pasted Graphic 9.png' %}" alt="">
@@ -135,6 +131,6 @@
 
       </div>
     </section>
-    
+    <script src="{% static 'portal/scripts/script.js' %}"></script>
   </body>
 </html>
