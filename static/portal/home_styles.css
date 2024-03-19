@@ -1,0 +1,807 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: antiquewhite;
+  font-family: 'Clash Display', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+#register_a {
+  color: white;
+}
+
+#register_a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-icon {
+  color: black;
+}
+
+.nav-icon:hover {
+  color: #1e1f1e;
+  text-decoration: none;
+}
+
+.first-div {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.collab {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
+  width: 400px;
+  margin: auto;
+  margin-top: 4%;
+}
+
+.event {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sociovate {
+  margin: auto;
+  margin-top: 2%;
+  position: relative;
+  z-index: 2;
+  width: 800px;
+  height: 250px;
+}
+
+.mountains {
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  margin-top: 10%;
+  z-index: 1;
+}
+
+.login-btn {
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  width: 90px;
+  height: 53px;
+  margin-left: 10px;
+  background-color: #ED402D;
+  color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  transition: opacity 0.15s, box-shadow 0.2s;
+}
+
+.login-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 1px 1px 1px black;
+}
+
+.login-btn:active {
+  opacity: 0.8;
+}
+
+.home {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 15px;
+}
+
+.home a{
+  color: black;
+}
+
+.home:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.top {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.home:active {
+  opacity: 0.5;
+}
+
+.top-bar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+}
+
+.IET-logos {
+  width: 110px;
+  height: 60px;
+}
+
+.IXDA-logos {
+  width: 150px;
+  height: 95px;
+  margin-top: -15px;
+}
+
+.X-logos {
+  height: 30px;
+  width: 40px;
+  margin-top: 5%;
+}
+
+.text-s {
+  font-size: 20px;
+}
+
+.text-sumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2%;
+  position: relative;
+  z-index: 2;
+  background-color: gray;
+  width: 700px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-color: green;
+  border-width: 3px;
+}
+
+.register-btn {
+  font-family: 'Clash Display', sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
+  margin: auto;
+  margin-top: 3%;
+  
+}
+
+.reg {
+  font-family: 'Clash Display', sans-serif; 
+  width: 240px;
+  height: 60px;
+  font-size: large;
+  background-color: #ED402D;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: slategray -3px 4px 1px;
+    transition: opacity 0.15s, box-shadow 0.2s;
+}
+
+.reg:hover {
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 1px 1px 1px black;
+  background-color: #ff3e28;
+}
+
+.reg:active {
+  opacity: 0.8;
+}
+
+.second-div {
+  width: 100%;
+  height: 100vh;
+  background-color: #122315;
+  margin-top: -90px;
+}
+
+.what {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
+  font-size: 60px;
+  margin-top: 13%;
+  color: #4ed91f;
+}
+
+.desc {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: 4%;
+  width: 100%;
+  font-size: 28px;
+  color: white;
+  max-width: 900px;
+}
+
+u {
+  margin-top: 3%;
+  margin-right: 4%;
+  font-size: 25px;
+}
+
+.regnow {
+  font-size: 35px;
+  height: 130px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  color: white;
+  margin-top: 7%;
+  justify-content: space-between;
+  border-style: solid;
+  border-top-color: white;
+  border-left-color: #122315;
+  border-right-color: #122315;
+  padding-left: 50px;
+}
+
+.third-div {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 580px;
+}
+
+.sdgs {
+  padding: 30px;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+
+.sdgg {
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-style: solid;
+  height: 380px;
+  border-radius: 15px;
+  background-color: white;
+  border-width: 3px;
+}
+
+.sdgimg {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+}
+
+.sdgtitle{
+  font-size: 27px;
+}
+
+.sdgdesc{
+  font-size: 16px;
+  text-align: center;
+}
+
+.tracktitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fourth-div {
+  width: auto;
+  height: 750px;
+  margin-top: 600px;
+  background-color: #28BFE5;
+  margin-bottom: 0;
+  position: relative; 
+}
+
+
+.contain {
+  position: relative; 
+  z-index: 3; 
+  padding: 30px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  z-index: 2;
+}
+
+.containers {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-style: solid;
+  height: 350px;
+  border-radius: 15px;
+  background-color: white;
+  border-width: 3px;
+  width: 500px;
+  z-index: 2;
+}
+
+.chapt {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.fullname {
+  font-size: 30px;
+  text-align: center;
+}
+
+.aboutustitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+}
+
+.cloud-1 {
+  z-index: 1;
+  position: absolute;
+  left: -15%;
+  top: 13%;
+}
+
+.cloud-2 {
+  z-index: 1;
+  position: absolute;
+  left: 71%;
+  top: 10%;
+}
+
+.cloud-3 {
+  z-index: 1;
+  position: absolute;
+  left: 4%;
+  top: 80%;
+}
+
+.cloud-4 {
+  z-index: 1;
+  position: absolute;
+  left: 70%;
+  top: 70%;
+}
+
+.cloud-1,.cloud-2,.cloud-3,.cloud-4{
+  width: 400px;
+  height: 130px;
+}
+
+
+#contactus {
+  overflow-x: hidden;
+  background-color: #0f3b00;
+  color: white;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#flexrow {
+  font-family: "Clash Display", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#getintouch {
+  color: greenyellow;
+  width: 50vw;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#numbers {
+  padding: 10px;
+
+  width: 30vw;
+  border: 2px solid greenyellow;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items:normal;
+  justify-content: space-around;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .collab {
+    margin-top: 10%;
+  }
+
+  .IET-logos {
+    width: 80px;
+    height: 40px;
+    margin-left: 9%;
+  }
+
+  .IXDA-logos {
+    margin-right: 9%;
+    width: 100px;
+    height: 65px;
+  }
+
+  .X-logos {
+    margin-top: 10px;
+    width: 30px;
+    height: 20px;
+  }
+
+  .sociovate {
+    margin-top: 5%;
+    width: 80%;
+    height: auto;
+  }
+
+  .first-div {
+    height: auto;
+  }
+
+  .mountains {
+    height: 440px;
+  }
+
+  .sdgimg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .text-sumn {
+    margin-top: 5%;
+    width: 90%;
+  }
+
+  .text-s {
+    font-size: 12px;
+  }
+
+  .top-bar {
+    align-items: center;
+  }
+
+  .home {
+    font-size: 8px;
+  }
+
+  .second-div {
+    height: 320px;
+    margin-top: 160px;
+    padding: auto;
+  }
+
+  .what {
+    font-size: 30px;
+  }
+
+  .desc {
+    font-size: 12px;
+    width: 400px;
+  }
+
+  .regnow {
+    height: auto;
+    font-size: 10px;
+    margin-left: -30px;
+  }
+
+  u {
+    font-size: 10px;
+  }
+
+  .third-div {
+    height: auto;
+  }
+
+  .sdgs {
+    padding: 10px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+
+  .sdgg {
+    height: 280px;
+    font-size: 12px;
+  }
+
+  .sdgtitle{
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .sdgdesc{
+    font-size: 9px;
+  }
+
+  .tracktitle {
+    font-size: 20px;
+  }
+
+  .fourth-div {
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  .aboutustitle {
+    font-size: 20px;
+  }
+
+  .containers {
+    height: 300px;
+    width: 90%;
+  }
+
+  .chapt {
+    font-size: 30px;
+  }
+
+  .fullname {
+    font-size: 8px;
+  }
+
+  .cloud-1 {
+    width: 200px;
+    height: 70px;
+  }
+
+  .cloud-2 {
+    top: 90px;
+    width: 110px;
+    height: 50px;
+  }
+
+  .cloud-3 {
+    width: 200px;
+    height: 70px;
+    left: -30%;
+  }
+
+  .cloud-4 {
+    width: 180px;
+    height: 70px;
+    left: 57%;
+    top: 80%;
+  }
+  
+  #flexrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #getintouch {
+    width: 70vw;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  #numbers {
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  .collab {
+    margin-top: 10%;
+  }
+
+  .IET-logos {
+    width: 80px;
+    height: 40px;
+    margin-left: 9%;
+  }
+
+  .IXDA-logos {
+    margin-right: 9%;
+    width: 100px;
+    height: 65px;
+  }
+
+  .X-logos {
+    margin-top: 10px;
+    width: 30px;
+    height: 20px;
+  }
+
+  .sociovate {
+    margin-top: 5%;
+    width: 80%;
+    height: auto;
+  }
+
+  .first-div {
+    height: auto;
+  }
+
+  .mountains {
+    height: 550px;
+  }
+
+  .sdgimg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .text-sumn {
+    margin-top: 5%;
+    width: 90%;
+  }
+
+  .text-s {
+    font-size: 15px;
+  }
+
+  .top-bar {
+    align-items: center;
+  }
+
+  .home {
+    font-size: 14px;
+  }
+
+  .second-div {
+    height: 500px;
+    margin-top: -86px;
+    padding: auto;
+  }
+
+  .what {
+    font-size: 50px;
+  }
+
+  .desc {
+    font-size: 15px;
+    width: 400px;
+  }
+
+  .regnow {
+    height: auto;
+    font-size: 20px;
+    margin-left: -30px;
+  }
+
+  u {
+    font-size: 12px;
+  }
+
+  .third-div {
+    height: auto;
+  }
+
+  .sdgs {
+    padding: 10px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+
+  .sdgg {
+    height: 180px;
+    font-size: 12px;
+  }
+
+  .sdgtitle{
+    font-size: 15px;
+  }
+
+  .sdgdesc{
+    font-size: 11px;
+  }
+
+  .tracktitle {
+    font-size: 20px;
+  }
+
+  .fourth-div {
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  .aboutustitle {
+    font-size: 20px;
+  }
+
+  .containers {
+    height: 300px;
+    width: 90%;
+  }
+
+  .chapt {
+    font-size: 30px;
+  }
+
+  .fullname {
+    font-size: 16px;
+  }
+
+  .cloud-1 {
+    left: -9%;
+    width: 240px;
+    height: 90px;
+  }
+
+  .cloud-2 {
+    top: 90px;
+    width: 220px;
+    height: 80px;
+  }
+
+  .cloud-3 {
+    width: 220px;
+    height: 80px;
+    left: -10%;
+  }
+
+  .cloud-4 {
+    width: 170px;
+    height: 70px;
+    left: 79%;
+    top: 75%;
+  }
+}
+

@@ -1,0 +1,320 @@
+body {
+
+    background-color: antiquewhite;
+    font-family: 'Orbitron', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover button{
+    font-size: large;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button-wrapper {
+    margin: 0 10px;
+}
+
+.button {
+    width: 200px;
+    height: 200px;
+    margin: 30px 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #010304;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button::before {
+    content: '';
+    width: 60px; /* Adjust circle diameter as needed */
+    height: 60px; /* Adjust circle diameter as needed */
+    border-radius: 50%; /* Circular shape */
+    background-color: #ffffff; /* White color for the circle */
+    border: 2px solid #000000; /* Black border */
+    display: flex;
+    justify-content: center; /* Center align icon horizontally */
+    align-items: center; /* Center align icon vertically */
+    box-shadow: -4px 1px 6px rgb(1, 158, 255);
+}
+
+.button.create-team-button::before {
+    content: '+';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px; /* Adjust icon size as needed */
+    color: #0f0a0a; /* White color for the icon */
+    margin-bottom: 10px; /* Spacing between the icon and text */
+    border-width: 1px;
+
+}
+
+.button.join-team-button::before {
+    content: '\2192'; /* Unicode for right arrow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px; /* Adjust icon size as needed */
+    color: #0f0a0a; /* White color for the icon */
+    margin-bottom: 10px; /* Spacing between the icon and text */
+    border-width: 1px;
+
+}
+
+#loginBtn {
+    font-family: 'Orbitron', sans-serif;
+    width: 90px;
+    height: 53px;
+    margin-left: 10px;
+    background-color: #ED402D;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: opacity 0.15s, box-shadow 0.2s;
+}
+
+.dashboard-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.user-info {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 150px;
+        height: 150px;
+        margin: 20px 10px;
+    }
+
+    .button::before {
+        width: 50px; /* Adjust circle diameter as needed */
+        height: 50px; /* Adjust circle diameter as needed */
+    }
+
+    .button.create-team-button::before {
+        font-size: 20px; /* Adjust icon size as needed */
+    }
+
+    .button.join-team-button::before {
+        font-size: 20px; /* Adjust icon size as needed */
+    }
+}
+
+@media (max-width: 576px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+body {
+    background-color:rgb(243, 229, 212); /* Choose your desired background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+h1{
+    text-align: center;
+    margin-top: 125px;
+    font-size: 30px;
+      
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    flex-direction: row;
+    height: 70vh; /* Make container fill the viewport vertically */
+}
+
+.box {
+    position: relative; /* Position for absolute elements */
+    width: 320px;
+    height: fit-content;
+    background-color: #ffffff; /* Background color */
+    border: 2px solid #000;
+    border-radius: 25px;
+    overflow: hidden; /* Hide overflow from rectangles */
+    margin: 0 30px; /* Add space between the boxes */
+    box-shadow: #969696 -3px 3px;
+    margin-top: -150px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.username,
+.team-members,
+.team-count,
+.username-right {
+    position: absolute; /* Position the text absolutely */
+    font-size: 14px;
+}
+
+.username {
+    top: 20px; /* Adjust top position */
+    left: 30px; /* Align to top left */
+}
+
+.team-members {
+    top: 60px; /* Adjust top position */
+    left: 30px; /* Align to top left */
+}
+
+.team-count {
+    top: 60px; /* Adjust top position */
+    right: 30px; /* Align to top right */
+}
+
+.username-right {
+    top: 20px; /* Adjust top position */
+    right: 30px; /* Align to top right */
+    margin: 1px 0px 0px 10px;
+}
+
+
+.rectangle-group {
+
+    width: 275px;
+    display: flex;
+    margin: 80px auto 20px auto;
+    flex-direction: column; /* Stack rectangles vertically */
+    gap: 10px; /* Add equal spacing between rectangles */
+}
+
+.rectangle-row {
+    display: flex;
+    justify-content: space-between; /* Spreads rectangles evenly */
+}
+
+.rectangle {
+    width: calc(45% - 5px); /* Adjust width (50% with some margin between rectangles) */
+    height: 50px; /* Adjust height */
+    background-color: #ffffff;
+    border-radius: 100px; /* Curved corners */
+    text-align: center;
+    border: 1.5px solid red;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 auto; /* Center the boxes horizontally */
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px auto 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+  
+  .submission-details {
+    text-align: center;
+  }
+  
+  .submission-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .submission-date {
+    margin-bottom: 5px;
+  }
+  
+  .submission-status {
+    margin-bottom: 20px;
+  }
+  
+  .submit-button {
+    display: block;
+    margin: 0 auto; /* Center align the button */
+    padding: 10px 90px;
+    background-color: #ED402D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: #969696 -3px 3px;
+    font-family: "Clash Display", sans-serif;
+      color: white;
+  }
+
+  .submit-button:hover {
+    background-color: #ff5e4d;
+    font-size: small;
+  }
+
+
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+  
+    .box {
+        margin: 20px 0;
+        width: 80%;
+        height: fit-content;
+    }
+    
+    .rectangle-group {
+
+        width: 100%;
+        display: flex;
+        margin: 80px auto 20px auto;
+        flex-direction: column; /* Stack rectangles vertically */
+        gap: 10px; /* Add equal spacing between rectangles */
+    }
+  }

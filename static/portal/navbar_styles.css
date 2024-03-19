@@ -1,0 +1,155 @@
+#navdiv {
+    height: 6vh;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 235, 215);
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    font-family: 'Clash Display', sans-serif;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    z-index: 100;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#scroll-nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: max-content;
+    height: 30px;
+    background-color: aliceblue;
+}
+
+#scroll-nav-icons ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+#scroll-nav-icons ul li {
+    margin: 0 1vw;
+}
+
+#scroll-nav-icons ul li:hover {
+    cursor: pointer;
+    color:rgba(0, 0, 0, 0.495);
+}
+
+#login-btn {
+    margin-left: 1vw;
+}
+
+#login-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+#login-btn button {
+    font-family: 'Clash Display', sans-serif;
+    font-size: large;
+    position: relative;
+    width: 90px;
+    height: 42px;
+    margin-left: 10px;
+    background-color: #ED402D;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: slategray -3px 4px 1px;
+    transition: opacity 0.15s, box-shadow 0.2s;
+}
+
+#login-btn button:hover {
+    cursor: pointer;
+  opacity: 1;
+  box-shadow: 1px 1px 1px black;
+  background-color: #ff3e28;
+    
+}
+
+#hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;
+    z-index: 1000;
+}
+
+
+@media screen and (max-width: 768px) {
+    #navdiv {
+        height: fit-content;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: -40px;
+    }
+
+    #hamburger-icon {
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin: 10px 10px 0px 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        border: 1px solid rgba(196, 196, 196, 0.19);
+        border-radius: 10px;
+        padding: 10px 10px;
+        margin-left: 20px;
+        width: max-content;
+        background-color: rgba(255, 255, 255, 0.577);
+    }
+
+    #scroll-nav-icons {
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: none;
+        height: auto;
+        background-color: transparent;
+    }
+
+    #scroll-nav-icons ul {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    #login-btn {
+        margin-left: 0;
+    }
+
+    #login-btn button {
+        width: 100px;
+        height: 39px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

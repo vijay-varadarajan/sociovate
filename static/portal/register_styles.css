@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f3ede4;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
+  .home-icon {
+    color: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px 0px 0px 20px;
+  }
+
+  .home-icon:hover {
+    color:#222222;
+    transform: scale(1.2);
+  }
+  
+  .register-bg {
+    width: 100vw;
+    height:auto;
+    z-index: -1;
+  }
+  
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2vh;
+  }
+  
+  .register-text {
+    font-family: "Clash Display", sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #122315;
+  }
+  
+  .register-form {
+    padding: 3rem 1.5rem;
+    background: #122315;
+    border: 4px solid #54dd4a;
+    box-shadow: -8px 8px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+  }
+  
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 2rem;
+    padding: 0 1.25rem;
+    background: #54dd4a;
+    border: 2px solid #000000;
+    border-bottom: 0;
+    border-radius: 8px 8px 0px 0px;
+    font-family: "Clash Display", sans-serif;
+    font-size: 1.25rem;
+  }
+  
+  input[type="text"], input[type="password"], input[type="email"]{
+    width: 100%;
+    height: 3.5rem;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 0px 8px 8px 8px;
+    
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-family: "Clash Display", sans-serif;
+    font-weight: normal;
+    padding-left: 0.5rem;
+  }
+
+  input[type="submit"] {
+    background-color: #ed402d;
+    border: none;
+    font-family: "Clash Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: white;
+  }
+
+  #register-submit:hover button{
+    background: #fb2c15;
+    cursor: pointer;
+  }
+  #register-submit:hover input{
+    background: #fb2c15;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #fb2c15;
+    cursor: pointer;
+  }
+  
+  #login-submit:hover button{
+    background: #fb2c15;
+    cursor: pointer;
+  }
+  #login-submit:hover input{
+    background: #fb2c15;
+    cursor: pointer;
+  }
+  
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.5rem;
+    height: 3rem;
+    background: #ed402d;
+    border-radius: 14px;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+    font-family: "Clash Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: white;
+    margin: 0.5rem 11rem 0 11rem;
+  }
+
+  p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: "Clash Display", sans-serif;
+    font-weight: normal;
+    padding-left: 0.5rem;
+    margin-top: 0.8rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: aliceblue;
+    text-decoration: underline;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .register-container {
+      margin: 5vh 2vw;
+    }
+  
+    .register-bg{
+      bottom: 0;
+      position: fixed;
+    }
+  
+    .register-text {
+      font-size: 3rem;
+    }
+  
+    .register-form {
+      height: auto;
+      width: 90%;
+      padding: 3rem 1rem;
+    }
+  
+    input {
+      width: 100%;
+      font-size: 1rem;
+      height: 2.5rem;
+    }
+  
+    button {
+      width: 50%;
+      margin: 0.5rem auto;
+    }
+    input[type="submit"] {
+        background: #ed402d;
+        border: none;
+        font-family: "Clash Display", sans-serif;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        width: 80%;
+      }
+
+      input[type="text"], input[type="password"], input[type="email"] {
+        width: 50%;
+      }
+  }
+  
+  @media only screen and (min-width: 1441px) {
+    .register-bg {
+      transform: scale(1.07);
+    }
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    input[type="text"], input[type="password"], input[type="email"] {
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      width: 50%;
+    }
+  }
