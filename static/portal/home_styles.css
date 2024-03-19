@@ -15,9 +15,8 @@ body {
 .first-div {
   background-color: antiquewhite;
   width: 100%;
-  height: 750px;  /* Gowtham change this to align the zig zac */
+ /* Gowtham change this to align the zig zac */
   position: relative;
-  -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/80px 100%;
 }
 
 .collab {
