@@ -3,43 +3,19 @@ html {
 }
 body {
   background-color: antiquewhite;
-  font-family: 'Clash Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: white;
-}
-
-#register_a {
-  color: white;
-}
-
-#register_a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.nav-icon {
-  color: black;
-}
-
-.nav-icon:hover {
-  color: #1e1f1e;
-  text-decoration: none;
+.main {
+  background-color: #122315;
 }
 
 .first-div {
   background-color: antiquewhite;
   width: 100%;
-  height: 100vh;
+  height: 750px;  /* Gowtham change this to align the zig zac */
   position: relative;
   -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/80px 100%;
 }
@@ -104,7 +80,7 @@ a:hover {
 }
 
 .home {
-  font-family: 'Clash Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 15px;
 }
 
@@ -183,12 +159,8 @@ a:hover {
   border-width: 3px;
 }
 
-.main{
-  background-color: #122315;
-}
-
 .register-btn {
-  font-family: 'Clash Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -196,40 +168,39 @@ a:hover {
   z-index: 2;
   margin: auto;
   margin-top: 3%;
-  
 }
 
 .reg {
-  font-family: 'Clash Display', sans-serif; 
+  font-family: 'Orbitron', sans-serif;
   width: 240px;
   height: 60px;
-  font-size: large;
   background-color: #ED402D;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    box-shadow: slategray -3px 4px 1px;
-    transition: opacity 0.15s, box-shadow 0.2s;
+  color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
 }
 
 .reg:hover {
   cursor: pointer;
-  opacity: 1;
-  box-shadow: 1px 1px 1px black;
-  background-color: #ff3e28;
+  opacity: 0.9;
 }
 
 .reg:active {
   opacity: 0.8;
 }
 
+
+
 .second-div {
   width: 100%;
-  height: 100vh;
+  height: 800px;
   background-color: #122315;
   margin-top: -1px;
+  border: none;
   -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/80px 100%;
 }
+
 
 .what {
   padding-top: 70px;
@@ -238,7 +209,7 @@ a:hover {
   justify-content: center;
   z-index: 2;
   font-size: 60px;
-  margin-top: 13%;
+  margin-top: 0%;
   color: #4ed91f;
 }
 
@@ -421,113 +392,7 @@ u {
 }
 
 
-#contactus {
-  overflow-x: hidden;
-  background-color: #0f3b00;
-  color: white;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#flexrow {
-  font-family: "Clash Display", sans-serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#getintouch {
-  color: greenyellow;
-  width: 50vw;
-  font-size: xx-large;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#numbers {
-  padding: 10px;
-
-  width: 30vw;
-  border: 2px solid greenyellow;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items:normal;
-  justify-content: space-around;
-}
-
-
-#numbers svg {
-  position: absolute;
-  z-index: 0;
-  width: 30%;
-  transform: translate(0%, 0%);
-}
-
-
-.social-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  width: 95vw;
-}
-
-.social-links span {
-  display: flex; 
-  align-items:center; 
-  justify-content:space-evenly;
-}
-
-.social-links span hr {
-  width: 60vw;
-  margin: 0 10px;
-  color: greenyellow;
-}
-
-.social-links span  b{
-  font-family: 'Clash Display', sans-serif; 
-  font-size: 16px;
-  font-weight: 400;
-}
-
-@media screen and (max-width: 1000px) {
-  
-.social-links span hr {
-  width: 40vw;
-}
-}
-
 @media screen and (max-width: 768px) {
-  .social-links span {
-    display: flex; 
-    align-items:center; 
-    justify-content:center;
-    flex-direction: column;
-  }
-  #numbers svg {
-    position: absolute;
-    z-index: 0;
-    width: 40%;
-    transform: translate(0%, 50%);
-  }
-
-  .social-links span hr{
-    width: 80vw;
-    margin: 10px 0;
-  }
-
-  .social-links span i b{
-    margin: 25px 0px;
-  }
-
   .collab {
     margin-top: 10%;
   }
@@ -563,7 +428,7 @@ u {
   .mountains {
     height: 440px;
   }
-
+  
   .sdgimg {
     width: 70px;
     height: 70px;
@@ -588,7 +453,7 @@ u {
 
   .second-div {
     height: 320px;
-    margin-top: 160px;
+    margin-top: -1px;
     padding: auto;
   }
 
@@ -612,6 +477,7 @@ u {
   }
 
   .third-div {
+    margin-top: 2rem;
     height: auto;
   }
 
@@ -688,26 +554,6 @@ u {
     height: 70px;
     left: 57%;
     top: 80%;
-  }
-  
-  #flexrow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #getintouch {
-    width: 70vw;
-    text-align: center;
-    font-size: x-large;
-  }
-
-  #numbers {
-    width: 40vw;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -874,4 +720,3 @@ u {
     top: 75%;
   }
 }
-
