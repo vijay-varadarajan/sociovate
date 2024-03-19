@@ -1,0 +1,4 @@
+triangles
+error messages
+font style and size fixes
+ADD TIMELINE
