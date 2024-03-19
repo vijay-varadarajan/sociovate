@@ -1,0 +1,23 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.curved-div {
+    position: relative;
+    background: #ff3c00;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+}
+
+.curved-div.upper {
+    background: #ff3c00;
+}
+
+.curved-div.upper2 {
+    background: #ff3c00;
+    transform: rotate(180deg);
+}
