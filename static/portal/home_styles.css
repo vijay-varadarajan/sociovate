@@ -391,8 +391,115 @@ u {
   height: 130px;
 }
 
+#contactus {
+  overflow-x: hidden;
+  background-color: #0f3b00;
+  color: white;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#flexrow {
+  font-family: "Clash Display", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#getintouch {
+  color: greenyellow;
+  width: 50vw;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#numbers {
+  padding: 10px;
+
+  width: 30vw;
+  border: 2px solid greenyellow;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items:normal;
+  justify-content: space-around;
+}
+
+
+#numbers svg {
+  position: absolute;
+  z-index: 0;
+  width: 30%;
+  transform: translate(0%, 0%);
+}
+
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 95vw;
+}
+
+.social-links span {
+  display: flex; 
+  align-items:center; 
+  justify-content:space-evenly;
+}
+
+.social-links span hr {
+  width: 60vw;
+  margin: 0 10px;
+  color: greenyellow;
+}
+
+.social-links span  b{
+  font-family: 'Clash Display', sans-serif; 
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 1000px) {
+  
+  .social-links span hr {
+    width: 40vw;
+  }
+  }
+  
 
 @media screen and (max-width: 768px) {
+  .social-links span {
+    display: flex; 
+    align-items:center; 
+    justify-content:center;
+    flex-direction: column;
+  }
+  #numbers svg {
+    position: absolute;
+    z-index: 0;
+    width: 40%;
+    transform: translate(0%, 50%);
+  }
+
+  .social-links span hr{
+    width: 80vw;
+    margin: 10px 0;
+  }
+
+  .social-links span i b{
+    margin: 25px 0px;
+  }
+
   .collab {
     margin-top: 10%;
   }
@@ -555,6 +662,27 @@ u {
     left: 57%;
     top: 80%;
   }
+  
+  #flexrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #getintouch {
+    width: 70vw;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  #numbers {
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 980px) {
