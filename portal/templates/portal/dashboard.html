@@ -51,24 +51,11 @@
             <span class="username-right">{{user.username}}</span>
             <div class="rectangle-group">
             <div class="rectangle-row">
-                <div class="rectangle">{{ member0.username }}</div>
-                {% if member1 != '-' %}
-                    <div class="rectangle">
-                        {{member1.username}}
-                    </div>
-                {% endif %}
+                {% for member in members %}
+                <div class="rectangle">{{ member.username }}</div>
+                {% endfor %}
             </div>
             <div class="rectangle-row">
-                {% if member2 != '-' %}
-                    <div class="rectangle">
-                        {{member2.username}}
-                    </div>
-                {% endif %}
-                {% if member3 != '-' %}
-                <div class="rectangle">
-                    {{member3.username}}
-                </div>
-            {% endif %}
             </div>
             </div>
             <a href="{% url 'leave_team_view' %}"><button class="submit-button">Leave</button></a>
