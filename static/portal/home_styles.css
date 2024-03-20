@@ -172,6 +172,7 @@ body {
 
 .reg {
   font-family: 'Clash Display', sans-serif;
+  font-size: large;
   width: 240px;
   height: 60px;
   background-color: #ED402D;
