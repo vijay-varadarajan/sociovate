@@ -39,7 +39,7 @@
           <input type="password" id="cnf-password" name="confirm_password" />
           {% if messages %}
           {% for message in messages %}
-           <div class="alert alert-{{ messages.tags }}" style="color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; width: 80%; display: flex; align-items: center; justify-content:center; padding: 10px; margin: 15px; border: 1px solid rgb(255, 255, 255); border-radius: 10px">
+           <div class="alert alert-{{ messages.tags }}" style="color: white; font-family:Verdana, Geneva, Tahoma, sans-serif; width: 80%; display: flex; align-items: center; justify-content:center; text-align:center; padding: 10px; margin: 15px; border: 1px solid rgb(255, 255, 255); border-radius: 10px">
               {{ message }}
            </div>
           {% endfor %}
