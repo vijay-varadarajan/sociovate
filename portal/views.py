@@ -380,6 +380,10 @@ def activate(request, uidb64, token):
         messages.success(request, "Account activated successfully!")
         return HttpResponseRedirect(reverse("login_view"))
     
+    userstatus = UserStatus.objects.get(user=user)
+    userstatus.delete()
+    user.delete()
+    
     messages.error(request, "Activation link expired!")
     return HttpResponseRedirect(reverse("login_view"))
 
