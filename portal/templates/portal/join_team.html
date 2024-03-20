@@ -34,12 +34,18 @@
                 </p>
             </div>
          
-            <div>
+            <div>   
                 <p> <label class="custom-label" for="Passcode">Enter team passcode</label><br>
                     <input type="number" id="Passcode" name="team_passcode" placeholder="XXXX" min="0" max="9999" minlength="4" maxlength="4" >
                 </p>
             </div>
-<br>
+<br>    {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
             <p><button class="button-reg" type="submit"><input type="submit" value="Join" /></button></p>
             <br>
             <p class="good-font-bold" ><a href="{% url 'create_team_view' %}">CREATE A TEAM</a></p>

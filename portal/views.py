@@ -18,6 +18,7 @@ import regex as re
 
 from .tokens import account_activation_token
 from .models import User, Team, Submission, UserStatus
+from django.contrib import messages
 
 
 @login_required(login_url='/login')

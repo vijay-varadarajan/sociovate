@@ -20,6 +20,15 @@
 </head>
 <body>
     {% include 'portal/includes/navbar.html' %}
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
     {% if not in_team %}
     <h2 class="dashboard-title">Dashboard</h2>
     <p class="user-info">{{ user.username }}</p>
