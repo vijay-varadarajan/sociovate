@@ -195,7 +195,7 @@ body {
 .second-div {
   width: 100%;
   background-color: #122315;
-  margin-top: -60px;
+  margin-top: -5px;
   
 }
 
@@ -475,6 +475,10 @@ u {
   }
   
 
+@media screen and (max-width: 1026px) {
+
+}
+
 @media screen and (max-width: 768px) {
   .social-links span {
     display: flex; 
@@ -742,13 +746,6 @@ u {
   .home {
     font-size: 14px;
   }
-
-  .second-div {
-    height: 500px;
-    margin-top: -86px;
-    padding: auto;
-  }
-
   .what {
     font-size: 50px;
   }
