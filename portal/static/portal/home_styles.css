@@ -22,7 +22,7 @@ a:hover {
   color: white;
 }
 
-#register_a:hover {
+#register_a:hover p{
   color: white;
   text-decoration: underline;
 }
