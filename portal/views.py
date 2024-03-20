@@ -39,6 +39,8 @@ def dashboard(request):
 
         submissions = Submission.objects.get(team=user_status.joined_team)
 
+        print(members)
+        
         return render(request, "portal/dashboard.html", {
             'in_team': True, 'member0': members[0], 'member1': members[1] if len(members) == 2 else '-', 'member2': members[2] if len(members) == 3 else '-', 'member3':members[3] if len(members) == 4 else '-' , 'count': len(members), 'submissions':submissions, 'team':team , 'message': '',
         })
