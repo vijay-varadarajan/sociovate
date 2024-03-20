@@ -155,7 +155,8 @@ def create_team_view(request):
         except:
             submissions = Submission(team=new_team, title="", track="", description="", github_link="", drive_link="")
             submissions.save()
-    
+            
+        messages.success(request, "Team created successfully!")
         return HttpResponseRedirect(reverse("dashboard"))
     
     user = request.user
@@ -328,7 +329,7 @@ def register_view(request):
             
         except IntegrityError:
             if User.objects.filter(username=username).exists():
-                messages.error(request, "Username already taken, try logging in.")
+                messages.error(request, "Username already taken.")
                 return HttpResponseRedirect(reverse("register_view"))
             
             else:
