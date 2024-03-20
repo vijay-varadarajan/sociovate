@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    {% include 'portal/includes/valley.html' with upper_bg="#122315" lower_bg="rgb(0, 0, 0, 0.1)" %}
+    {% include 'portal/includes/valley.html' with upper_bg="#122315" lower_bg="rgb(0, 0, 0, 0.9)" %}
     <section id="about">
       <div>
         
@@ -54,15 +54,15 @@
           </div>
           <div class="desc">An overnight offline ideathon & designathon collaboratively organised by Interaction Design Association (IxDA) and The Institution of Engineering and Technology(IET) at VIT-Vellore. The event expects to see over 250 participants. It aims to spotlight unique and innovative ideas over 33 hours on 17 SDG principles and design a prototype, from 18th to 19th March.</div>
           <div class="regnow">
-            <a href="{% url 'register_view' %}" id="register_a"><p>-> Register now</p></a>
+            <a href="{% url 'register_view' %}" id="register_a"><p style="color: aliceblue;">-> Register now</p></a>
             <u>Make an Impact on Social Development</u>
           </div>
         </div>
       </div>
     </section>
-    {% include 'portal/includes/valley.html' %}
+    {% include 'portal/includes/valley.html' with upper_bg="#122315" lower_bg="rgb(200, 200, 200, 0.9)" %}
     {% include 'portal/includes/timeline.html' %}
-    {% include 'portal/includes/valley.html' %}
+    {% include 'portal/includes/valley.html' with upper_bg="#122315" lower_bg="rgb(200, 200, 200, 0.9)" %}
     <section id="tracks">
       <br>
       <div class="third-div">
