@@ -231,6 +231,7 @@ h1{
 .rectangle-row {
     display: flex;
     justify-content: space-between; /* Spreads rectangles evenly */
+    flex-wrap: wrap;
 }
 
 .rectangle {
